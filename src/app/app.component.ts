@@ -11,7 +11,6 @@ import { Observable } from 'rxjs';
 
 export class AppComponent implements OnInit {
   public images$: Observable<Image[]>;
-  public innerWidth: number;
   constructor(
     private appService: AppService
   ) { }
