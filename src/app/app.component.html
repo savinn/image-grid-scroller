@@ -1,5 +1,10 @@
-<div class="row" *ngFor="let image of images">
-  <div class="tile">
-    <img [src]="image.thumbnailUrl">
-  </div>
-</div>
+<ul>
+  <cdk-virtual-scroll-viewport itemSize="300" class="viewport">
+    <li *cdkVirtualFor="let images of images$ | async | chunk:getAmountOfDisplayedItems">
+      <div *ngFor="let img of images" class="container"  matTooltip={{img.title}} matTooltipPosition="above">
+        <img *ngIf="img?.thumbnailUrl" [src]="img.thumbnailUrl">
+        <div>{{img?.title}}</div>
+      </div>
+    </li>
+  </cdk-virtual-scroll-viewport>
+</ul>
