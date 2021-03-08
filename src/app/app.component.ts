@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   }
 
   public get getAmountOfDisplayedItems(): number {
+    // 200 is 180px of the tile and the margin
     return Math.floor(window.innerWidth / 200);
   }
 
