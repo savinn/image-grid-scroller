@@ -5,7 +5,7 @@ import { ChunkPipe } from './chunk.pipe';
 
 describe('Pipe: Chunke', () => {
   it('create an instance', () => {
-    let pipe = new ChunkPipe();
+    const pipe = new ChunkPipe();
     expect(pipe).toBeTruthy();
   });
 });
