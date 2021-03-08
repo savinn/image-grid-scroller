@@ -9,7 +9,7 @@ import { ChunkPipe } from './chunk.pipe';
 import { MatTooltipModule } from '@angular/material';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       ChunkPipe
    ],
